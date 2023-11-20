@@ -1,4 +1,4 @@
-# The website for [H2TC](https://h2tc.github.io/)
+# The website code for [H2TC](https://h2tc-roboticsx.github.io/)
 
 ## Files
 - _config.yml: configuration file for the website layout and structure, such as site description, logo, site navigation and footer. 

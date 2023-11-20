@@ -13,8 +13,7 @@ synchronized streaming, saving and visualization of human
 throw&catch activities from multiple sensors with varying
 sampling rates and data formats. 
 
-If you aim to record your human demonstrations like ours, we provide step-by-step [instructions](https://github.com/h2tc-roboticsx/H2TC/tree/main#recorder) and [scripts](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/recorder.py) in the GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/) of the dataset. 
-
+If you intend to record human demonstrations similar to ours, we provide step-by-step [instructions](https://github.com/h2tc-roboticsx/H2TC/tree/main#recorder) and [scripts](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/recorder.py) in the dataset's GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/).
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/h2tc-roboticsx/H2TC/main/doc/resources/hardware.png" width=1600>
@@ -46,9 +45,8 @@ If you aim to record your human demonstrations like ours, we provide step-by-ste
     </tr>
 </table  > -->
 
-Our recording framework employs multiple motion track and visual streaming systems, whose specifications are shown briefly below.
-We refer users to our [paper](toadd) for a quick overview of how they are deployed and to their official product pages for detailed technical specifications. 
-
+Our recording framework utilizes multiple motion track and visual streaming systems,  with their specifications briefly outlined below.
+We encourage users to consult our [technical paper](https://h2tc-roboticsx.github.io/underreview/) for a quick overview of their deployment and refer to the official product pages for detailed technical specifications.
 
 | Device | Manufacturer | Recording Content |FPS |Resolution  |
 |:-----|:-----:|:-----:|:-----:|:-----:|
@@ -56,13 +54,9 @@ We refer users to our [paper](toadd) for a quick overview of how they are deploy
 | ②⑤ Tracker | [OptiTrack](https://optitrack.com/) |  6D Head Pose | 240 | - |
 | ③ Event Camera | [Prophesee](https://www.prophesee.ai/) | Event | - | 1280x720 |
 | ④ ZED Camera | [Stereolabs](https://www.stereolabs.com/zed-2/) |  RGB-D | 60 | 1280x720 |
-
 <br>
 
-
-We apply Precision Time Protocol (PTP) to synchronize their clocks with a precision of sub-milliseconds (**around 0.3 ms**). The maximum offset across data streams is ≤ 1 frame at 60 FPS, as evaluated during manual annotation.  We refer users to the provided technical [document](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_techdetails.md) in the GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/), which explains in detail how we process and synchronize each data modality.
-
-
+We implement the Precision Time Protocol (PTP) to synchronize their clocks with a precision of sub-milliseconds (**approximately 0.3 ms**). The maximum offset across data streams is ≤ 1 frame at 60 FPS, as assessed during manual annotation. We encourage users to consult the provided [technical document](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) in the GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/), which offers a detailed explanation of how we process and synchronize each data modality.
 
 
 <!-- | ⑥⑦ Human Skeleton | [Stereolabs](https://www.stereolabs.com/zed-2/) |  RGB-D | - | 1280x720 | -->

@@ -5,11 +5,14 @@ excerpt:
 
 <!-- #### License -->
 
-This page presents details of our [dataset](#the-dataset-in-numbers) and the supporting sources for downloading <a href ="https://www.dropbox.com/sh/ahet936ypjs1582/AACNYG0sjf1XdVxuZVLVL4fFa?dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc.github.io/main/assets/images/buttons/download_small.png"  width=20></a> , such as [object models](#objects) and [annotations](#annotation).  We also offer a set of [sample cases](#sample-cases) that allow a quick glance of the human-human throw&catch activities provided in the dataset.
+This page provides details of our [dataset](#the-dataset-in-numbers) and the supporting sources for downloading,
+ <!-- <a href ="https://www.dropbox.com/sh/ahet936ypjs1582/AACNYG0sjf1XdVxuZVLVL4fFa?dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc.github.io/main/assets/images/buttons/download_small.png"  width=20></a> ,  -->
+ such as [annotations](#annotation) and [object models](#objects). Additionally, we offer a selection of [sample cases](#sample-cases) that showcase the human-human throw&catch activities featured in the dataset.
 
+<!-- Briefly, as shown below, our dataset consists of multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams of each human-human throw&catch activity, along with a hierachy of <u>semantic and dense annoataion</u>, such as <u>human  hand (both joint and 6D pose)</u> and  <u>human body</u> motions.
+Below is a glance at the recorded visual streams in our dataset.  -->
 
-Briefly, as shown below, our dataset consists of multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams of each human-human throw&catch activity, along with a hierachy of <u>semantic and dense annoataion</u>, such as <u>human  hand (both joint and 6D pose)</u> and  <u>human body</u> motions.
-<!-- Below is a glance at the recorded visual streams in our dataset.  -->
+Briefly, our dataset comprises multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams for each human-human throw&catch activity. It is accompanied by a hierarchy of <u>semantic and dense annotations</u>, such as human hand joints and body motions, as shown below.
 
 
 
@@ -22,19 +25,32 @@ Briefly, as shown below, our dataset consists of multi-view synchronized <u>RGB<
         </div>
     </div>
 </div>
-<!-- <br> -->
 
-The dataset is recorded in a flat lab area, which resembles the real throw&catch scenes with unstructured, cluttered and dynamic surroundings.  We refer users to our [paper](toadd) and the Github [repository](https://github.com/h2tc-roboticsx/H2TC/)  for full details of the dataset construction.
+<br>
+
+<!-- The dataset is recorded in a flat lab area, which resembles the real throw&catch scenes with unstructured, cluttered and dynamic surroundings.  We refer users to our [paper](toadd) and the Github [repository](https://github.com/h2tc-roboticsx/H2TC/)  for full details of the dataset construction. -->
+
+
+
+
+
+####  Dataset Construction
+
+The dataset is recorded in a flat lab area that closely resembles real-world throw-and-catch scenarios, featuring unstructured, cluttered, and dynamic surroundings,  as illustrated schematically below. For comprehensive details on the dataset construction, we encourage users to refer to our [technical paper](https://h2tc-roboticsx.github.io/underreview/) and the associated GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/).
+
 
 <table  >
  <tr>
 <td  >
-<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/schema.png" width=600>
+<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/schema.png" width=700>
 </td>
 </tr>
 </table  >
 
+<br>
+
 In addition, our dataset also provides a hierarchy of semantic and dense [annotations](#annotation), e.g. the ground truth human hand, body and object motions captured with motion capture systems. 
+
 
 #### The Dataset in Numbers
   
@@ -72,15 +88,21 @@ Some facts about our dataset:
 </table>
 <br>
 
-All captured data, both raw  and processed, are stored  in Dropbox <a href ="https://www.dropbox.com/sh/ahet936ypjs1582/AACNYG0sjf1XdVxuZVLVL4fFa?dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a> with rich [annotaions](#annotation) and other supporting files.  They are organized  with a bunch of [supporting files](https://github.com/h2tc-roboticsx/H2TC/tree/main/doc), such as [object models](#objects), and  in a hierarchical  manner. We refer users to the [data guide](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our technical [ paper](#paper), to understand details of the data hierachy and each stored data file in our dataset.<br>
+<!-- All captured data, both raw  and processed, are stored  in Dropbox <a href ="https://www.dropbox.com/sh/ahet936ypjs1582/AACNYG0sjf1XdVxuZVLVL4fFa?dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a> with rich [annotaions](#annotation) and other supporting files.  They are organized  with a bunch of [supporting files](https://github.com/h2tc-roboticsx/H2TC/tree/main/doc), such as [object models](#objects), and  in a hierarchical  manner. We refer users to the [data guide](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our technical [ paper](#paper), to understand details of the data hierachy and each stored data file in our dataset.<br>
 
-We also provide a suite of scripted [tools](https://h2tc-roboticsx.github.io/tools/#data-processing) to facilitate the usage, open maintenance and extension of our dataset.
-<!-- You can use the [processor tool](https://lipengroboticsx.github.io/tools/#data-processing) to convert the captured data into the format mentioned in Table 5 and Figure 7 of [our paper]().  -->
+We also provide a suite of scripted [tools](https://h2tc-roboticsx.github.io/tools/#data-processing) to facilitate the usage, open maintenance and extension of our dataset. -->
+
+All captured data, both raw and processed, are stored in Dropbox <a href="https://h2tc-roboticsx.github.io/notpubyet/"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png" width=20></a>, complete with rich [annotations](#annotation) and other supporting files. The data is organized in a hierarchical manner, accompanied by a variety of 
+[supporting tutorials](https://github.com/h2tc-roboticsx/H2TC/tree/main/doc) and files, such as [object models](#objects). We encourage users to consult the [data guide](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our [technical paper](https://h2tc-roboticsx.github.io/underreview/) to understand the details of the data hierarchy and each stored data file in our dataset.
+
+Additionally, we provide a collection of scripted [tools](https://h2tc-roboticsx.github.io/tools/#data-processing) to facilitate the usage, open maintenance, and extension of our dataset.
+
 
 ####  Sample Cases
 
-To give a quick overview of the dataset,   we provides several sample cases here which are available in Dropbox<a href ="https://www.dropbox.com/sh/dghb9k4w4w938q0/AAAMIjWBbzy290QI_Nljocqda?dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>. 
-It includes the recorded streams (both raw and processed) of six throw&catch activitie and the annotation files, which are organized hierarchically  as described above.
+
+To offer a quick overview of the dataset,   we provide several sample cases here, which are available in Dropbox <a href="https://www.dropbox.com/scl/fo/exb0vj76ei789w58bzhqv/h?rlkey=bpc5qr22gr3qgdd3ierf32fpd&dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>. 
+These samples include the recorded streams (both raw and processed) of six throw&catch activities involved in our dataset, as well as their annotation files. The data is organized hierarchically, as described earlier.
    
 <table   width=1000 style="border-collapse: collapse; border-spacing: 1; text-align: left;">
     <tr >
@@ -98,7 +120,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <td  > Helmet </td> 
         <td  style="text-align: left;"> 
         The auxiliary (right) subject threw a <u>'helmet'</u> with the <u>'right'</u> hand from the hand location <u>('right', 'chest')</u> and the body location <u>(1.17, 3.28)</u>,
-        and then the primary (left) subject <u>successfully</u> caught the helmet with  <u>'both'</u> hands from the hand location of  <u>('middle', 'chest')</u> and the body location <u>(0.21, 1.14)</u>.
+        and then the primary (left) subject <u>successfully</u> caught the helmet with the  <u>'both'</u> hands from the hand location <u>('middle', 'chest')</u> and the body location <u>(0.21, 1.14)</u>.
 </td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr>
@@ -108,7 +130,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <!-- <td  > xx </td> -->
         <td  > Magazine </td> 
         <td  style="text-align: left;">   The  primary (left) subject threw a <u>'magazine'</u> with the <u>'both'</u> hands from the hand location <u>('middle', 'overhand')</u> and the body location <u>(1.2, 1.05)</u>,
-        and then theauxiliary (right) subject <u>successfully</u> caught the magazine with  <u>'both'</u> hands from the hand location of  <u>('middle', 'underhand')</u> and the body location <u>(1.54, 3.01)</u>. </td>
+        and then theauxiliary (right) subject <u>successfully</u> caught the magazine with the <u>'both'</u> hands from the hand location <u>('middle', 'underhand')</u> and the body location <u>(1.54, 3.01)</u>. </td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr >
           <tr bgcolor="#eeeeee">
@@ -118,7 +140,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <td  > Apple <br> (3D printed) </td> 
         <td  style="text-align: left;"> 
         The  primary (left) subject threw an <u>'apple'</u> with the <u>'right'</u> hand from the hand location <u>('middle', 'chest')</u> and the body location <u>(0.15, 1.77)</u>,
-        and then theauxiliary (right) subject <u>successfully</u> caught the apple with  <u>'both'</u> hands from the hand location of  <u>('middle', 'underhead')</u> and the body location <u>(1.71, 4.47)</u>.   </td>
+        and then theauxiliary (right) subject <u>successfully</u> caught the apple with the  <u>'both'</u> hands from the hand location of  <u>('middle', 'underhead')</u> and the body location <u>(1.71, 4.47)</u>.   </td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr>
     <tr>
@@ -128,7 +150,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <td  > Beverage can </td> 
         <td  style="text-align: left;"> 
         The auxiliary (right) subject threw a <u>'beverage can'</u> with the <u>'left'</u> hand from the hand location <u>('middle', 'chest')</u> and the body location <u>(1.13, 3.29)</u>,
-        and then the primary (left) subject <u>successfully</u> caught the can with  <u>'both'</u> hands from the hand location of  <u>('middle', 'chest')</u> and the body location <u>(0.92, 1.14)</u>. </td>
+        and then the primary (left) subject <u>successfully</u> caught the can with the  <u>'both'</u> hands from the hand location  <u>('middle', 'chest')</u> and the body location <u>(0.92, 1.14)</u>. </td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr>
     <tr bgcolor="#eeeeee">
@@ -138,7 +160,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <td  > Bottled water </td> 
         <td  style="text-align: left;"> 
         The auxiliary (right) subject threw a <u>'bottled water'</u> with the <u>'both'</u> hands from the hand location <u>('middle', 'overhead')</u> and the body location <u>(1.19,4.00)</u>,
-        and then the primary (left) subject <u>successfully</u> caught the bottle with  <u>'both'</u> hands from the hand location of  <u>('middle', 'chest')</u> and the body location <u>(0.36, 0.81)</u>.</td>
+        and then the primary (left) subject <u>successfully</u> caught the bottle with the <u>'both'</u> hands from the hand location <u>('middle', 'chest')</u> and the body location <u>(0.36, 0.81)</u>.</td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr>
     <tr>
@@ -148,7 +170,7 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
         <td  > Doll </td> 
         <td  style="text-align: left;"> 
        The  primary (left) subject threw an <u>'doll'</u> with the <u>'right'</u> hand from the hand location <u>('middle', 'chest')</u> and the body location <u>(0.12, 1.75)</u>,
-        and then theauxiliary (right) subject <u>successfully</u> caught the doll with  <u>'both'</u> hands from the hand location of  <u>('middle', 'chest')</u> and the body location <u>(1.65, 4.56)</u>.    </td>
+        and then theauxiliary (right) subject <u>successfully</u> caught the doll with  the <u>'both'</u> hands from the hand location  <u>('middle', 'chest')</u> and the body location <u>(1.65, 4.56)</u>.    </td>
         <!-- <td  > <a href ="https://github.com/lipengroboticsx/Human_Catch_Throw_Transfer"><img decoding="async" src="https://raw.githubusercontent.com/lipengroboticsx/lipengroboticsx.github.io/lx_test/assets/images/buttons/download_small.png"  width=50></a> </td> -->
     </tr>
 </table>
@@ -157,36 +179,37 @@ It includes the recorded streams (both raw and processed) of six throw&catch act
 
 #### Annotation
 
-Our dataset provides a hierarchy of semantic and dense annotations, which allows it suited for a range of studies,  e.g. from low-level physical skill learning to high-level pattern recognition.
-You can download and check the sample annotations from Dropbox  <a href ="https://www.dropbox.com/home/H2TC/sample%20cases/annotations"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>. 
+Our dataset offers a hierarchy of semantic and dense annotations, making it suitable for a variety of research applications, ranging from low-level physical skill learning to high-level pattern recognition. You can download and examine the sample annotations from Dropbox <a href ="https://www.dropbox.com/scl/fo/pz8nlw22sv01ai29aqysc/h?rlkey=ca6m9uu8p3ljkw06su75n40ek&dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>.  
 
-Briefly,  each throw&catch activity in our dataset is labeled with
+Briefly,  each throw&catch activity in our dataset is labeled with:
 <p style="margin-left: 0em; ">
-<b>1. Human-object interaction states</b>. As illustrated below, each involved throw&catch activity is segmented into four phases, including <u>pre-throwing</u>, <u>object flying</u>, <u>catching</u> and <u>post-catching</u>, with three manually annotated moments including <u>throw</u>, <u>catch touch</u> and <u>catch stable</u>. <br>
+<b>1. Human-object interaction states</b>. As depicted below, each involved throw&catch activity is segmented into four phases, including <u>pre-throwing</u>, <u>object flying</u>, <u>catching</u> and <u>post-catching</u>, with three manually annotated moments including <u>throw</u>, <u>catch touch</u> and <u>catch stable</u>. <br>
 </p>
 
 <table  > <tr><td  >  <img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/seg_00.png" width=1600></td></tr></table  >
 
 <p style="margin-left: 0em;">
-<b>2. Human hand, body and object motions</b>.  The ground truth human hand joint motions, 6D body and object motions are recorded with high-precision <a href="https://h2tc-roboticsx.github.io/recorder/">motion capture</a>   systems, e.g. OptiTrack and MoCap gloves.
+<b>2. Human hand, body and object motions</b>.  The ground truth human hand joint motions, 6D body and object motions are recorded with high-precision <a href="https://h2tc-roboticsx.github.io/recorder/">motion capture systems</a>, e.g. OptiTrack and MoCap gloves. 
 </p>
 
 <p style="margin-left: 0em;">
-<b>3. Other semantic and dense annotations</b>. The human subjects' behaviors are manually checked and annotated with symbolic labels in terms of <u>grasp mode</u> and <u>hand locations</u> during throw&catch, as illustrated below. In addition,  the subjects' <u>exact standing locations</u> and the <u>average flying speed of the object</u> are also automatically annotated as quantitative labels.  <br>
+<b>3. Other semantic and dense annotations</b>.The human subjects' behaviors are manually inspected and annotated with symbolic labels, including <u>grasp mode</u> and <u>hand locations</u> during throw&catc, as shown below. Moreover, the subjects' <u>exact standing locations</u> and the <u>average flying speed of the object</u> are automatically annotated as quantitative labels.<br>
 </p>
 
 <table  > <tr><td  >  <img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/instruction.png" width=600></td></tr></table  >
 <br>
 
 
-The complete annotation hierarchy is detailed below:
+The comprehensive annotation hierarchy is outlined below:
 
-<table width=1200 style="text-align: left;">
+
+
+<table width=2000 style="text-align: left;">
     <tr bgcolor="#696969"  style="text-align: left;">
-        <td>Name</td>
-        <td>Description</td>
-        <td>Value</td>
-        <td>Labeling Type</td>
+        <td  width=300> Name </td>
+        <td width=1200> Description</td>
+        <td width=500>  Value</td>
+        <td width=200>  Labeling Type</td>
     </tr>
     <tr    style="text-align: left;">
         <td style="text-align: left;">Object</td>
@@ -293,15 +316,12 @@ The complete annotation hierarchy is detailed below:
 </table>
 <br>
 
-For more details about the annotation, we refer users to our [paper](toadd) and the Github [repository](https://github.com/h2tc-roboticsx/H2TC/) of the dataset. 
- We also provide an [annotation tool](https://h2tc-roboticsx.github.io/tools/#annotator) with a full technical [document](https://github.com/h2tc-roboticsx/H2TC/blob/main/README.md), which allows users to annotate their custom-captured data from a similar or the same recording framework as ours. 
+For additional information about the annotations, we encourage users to refer to our [technical paper](https://h2tc-roboticsx.github.io/underreview/) and the GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/) of the dataset. Furthermore, we provide an [annotation tool](https://h2tc-roboticsx.github.io/tools/#annotator) accompanied by a comprehensive technical [tutorial](https://github.com/h2tc-roboticsx/H2TC/blob/main/README.md), enabling users to annotate custom-captured data from a recording framework similar to or identical to ours.
 <br>
 
 #### Objects
 
-The dataset includes a total of 52 objects, which are roughly classified as 21 rigid objects, 16 soft objects and 15 3D-printed objects. All objects are particularly selected as they are commonly found and manipulated by throw&catch in domestic and/or  industrial scenes.
-You can download the scaned object models from Dropbox<a href ="https://www.dropbox.com/scl/fo/le7yd4zs4508nro6xw6mv/h?rlkey=8iegb7lu2po75c6uin25l8yxd&dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>. 
-
+The dataset comprises a total of 52 objects, which can be broadly categorized into 21 rigid objects, 16 soft objects, and 15 3D-printed objects. These objects have been specifically selected as they are commonly found and manipulated in throw-and-catch activities within domestic and/or industrial settings. You can download the scanned object models from  Dropbox <a href ="https://www.dropbox.com/scl/fo/le7yd4zs4508nro6xw6mv/h?rlkey=8iegb7lu2po75c6uin25l8yxd&dl=0"><img decoding="async" src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/buttons/download_small.png"  width=20></a>.
 
 <table >
     <tr>
