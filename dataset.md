@@ -12,7 +12,7 @@ This page provides details of our [dataset](#the-dataset-in-numbers) and the sup
 <!-- Briefly, as shown below, our dataset consists of multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams of each human-human throw&catch activity, along with a hierachy of <u>semantic and dense annoataion</u>, such as <u>human  hand (both joint and 6D pose)</u> and  <u>human body</u> motions.
 Below is a glance at the recorded visual streams in our dataset.  -->
 
-Briefly, our dataset comprises multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams for each human-human throw&catch activity. It is accompanied by a hierarchy of <u>semantic and dense annotations</u>, such as human hand joints and body motions, as shown below.
+Briefly, as shown in the figure below, for each recorded human-human throw&catch activity,  our dataset comprises multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams. It is accompanied by a hierarchy of <u>semantic and dense annotations</u>, such as human <u>body</u>, <u>hands</u> and <u>object</u> motions.
 
 
 

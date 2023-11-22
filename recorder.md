@@ -48,14 +48,15 @@ If you intend to record human demonstrations similar to ours, we provide step-by
 Our recording framework utilizes multiple motion track and visual streaming systems,  with their specifications briefly outlined below.
 We encourage users to consult our [technical paper](https://h2tc-roboticsx.github.io/underreview/) for a quick overview of their deployment and refer to the official product pages for detailed technical specifications.
 
+
 | Device | Manufacturer | Recording Content |FPS |Resolution  |
-|:-----|:-----:|:-----:|:-----:|:-----:|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ① Gloves | [StretchSense MoCap Pro](https://stretchsense.com/) | Primary's Hand Pose | 120 | - |
 | ②⑤ Tracker | [OptiTrack](https://optitrack.com/) |  6D Head Pose | 240 | - |
 | ③ Event Camera | [Prophesee](https://www.prophesee.ai/) | Event | - | 1280x720 |
 | ④ ZED Camera | [Stereolabs](https://www.stereolabs.com/zed-2/) |  RGB-D | 60 | 1280x720 |
-<br>
 
+<br>
 We implement the Precision Time Protocol (PTP) to synchronize their clocks with a precision of sub-milliseconds (**approximately 0.3 ms**). The maximum offset across data streams is ≤ 1 frame at 60 FPS, as assessed during manual annotation. We encourage users to consult the provided [technical document](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) in the GitHub [repository](https://github.com/h2tc-roboticsx/H2TC/), which offers a detailed explanation of how we process and synchronize each data modality.
 
 
