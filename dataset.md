@@ -15,7 +15,6 @@ Below is a glance at the recorded visual streams in our dataset.  -->
 Briefly, as shown in the figure below, for each recorded human-human throw&catch activity,  our dataset comprises multi-view synchronized <u>RGB</u>, <u>depth</u> and <u>event</u> streams. It is accompanied by a hierarchy of <u>semantic and dense annotations</u>, such as human <u>body</u>, <u>hands</u> and <u>object</u> motions.
 
 
-
 <div class="container" style="width: 100%;">
     <div class="row">
         <div class="col-lg-16">
