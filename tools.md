@@ -226,13 +226,13 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
 python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-path <h2tc_takeid_processed_folder> --mmhuman <mmhuman_file> --out <out_pose_folder>
 ```
 
-<small > `<h2tc_takeid_processed_folder>`: the processed folder, like `root/002870/processed/rgbd0`. </small><br>
+ `<h2tc_takeid_processed_folder>`: the processed folder, like `root/002870/processed/rgbd0`. 
 
-<small > `<mmhuman_file>`: the coarse pose file extracted from [Coarse human pose estimation](#2-coarse-human-pose-estimation), like `root/vis_results/inference_result.npz`</small><br>
+ `<mmhuman_file>`: the coarse pose file extracted from [Coarse human pose estimation](#2-coarse-human-pose-estimation), like `root/vis_results/inference_result.npz`
 
-<small > `<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz` </small><br>
+`<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz` 
 
-###### Optimization Algorithm:
+###### Optimization Algorithm
 
 Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results. <br>   
 
@@ -258,16 +258,16 @@ The wrist cost $`\mathcal{C}_\text{wst}`$ is used to disambiguate the right/left
 \mathcal{C}_\text{wri} =\lambda _\text{wri}\sum_{t=0}^{T}\sum_{h=0}^{1}\left \| {\mathbf{v}_\text{wri}}_t^h-\mathbf{o}_t^h \right \| ^2 
 ```
 
-where ${\mathbf{v}_\text{wri}}_t^h$ is the SMPLH right/left wrist pose.   
+where ${\mathbf{v}_\text{wri}}_t^h$ is the SMPLH right/left wrist pose.  <br> 
 
-Independent frame-by-frame pose estimation always causes temporally inconsistent. The regularization term $\mathcal{C}_\text{smo}$ is used to guarantee the smoothness of the motion recovering and keep it reasonable. 
-The smooth term encourages the 3D joints consistency. It is formulated as 
+Independent frame-by-frame pose estimation always causes temporally inconsistent. The regularization term $\mathcal{C}_\text{smo}$ is used to guarantee the smoothness of the motion recovering and keep it reasonable. The smooth term encourages the 3D joints consistency. It is formulated as <br>
 
-$
+```math
 \mathcal{C}_\text{smo}= \sum_{t=1}^{T}
 (\lambda_\text{jp}\sum_{j=1}^{N} \left \| \mathbf{J}_t^j - \mathbf{J}_{t-1}^j \right \|^2   
 +\lambda_\text{bl}\sum_{i=1}^{B} ( l_t^i - l_{t-1}^i )^2
-)$
+)
+```
 
 $\mathbf{J}_t$ is the joint position at time $t$.
 Bone lengths $l_t^j$ are from $\mathbf{J}_t^j$ at each step. 
