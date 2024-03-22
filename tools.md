@@ -14,7 +14,7 @@ This page offers tools for recording, processing, annotating, and reconstructing
     <!-- (3) <a href="https://lipengroboticsx.github.io/tools/#-annotator">annotator</a>  -->
     (3) [Annotator](#annotator) offers an interactive interface that enables users to visually validate and annotate each recorded throw&catch activity with a hierarchy of semantic and dense labels. <br>
     <!-- <a href="https://lipengroboticsx.github.io/tools/#-human-poseshape-extractor">Human pose&shape extractor</a>  -->
-    (4) [Human motion constructor](#Human-motion-construction-and-retarget) reconstructs and optimizes human motions using multi-modal data streams in the dataset, and re-targetthe the constructed human motions to multiple robots and multi-fingered hands. <br>
+    (4) [Human motion constructor](#Human-motion-construction) reconstructs and optimizes human motions using multi-modal data streams in the dataset, and re-targetthe the constructed human motions to multiple robots and multi-fingered hands. <br>
 
 
 #### Data Processing
@@ -131,7 +131,7 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 
 We encourage users to consult the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
-#### Human motion construction and retarget 
+#### Human motion construction 
 
 <!-- # Human Pose Extraction -->
 ##### 1. Camera calibration
