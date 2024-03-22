@@ -131,10 +131,11 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 
 We encourage users to consult the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
+
 #### Human motion construction 
 
-<!-- # Human Pose Extraction -->
-##### 1. Camera calibration
+
+<!-- ##### 1. Camera calibration
 - The camera intrinsic matrix is:
 ```
 [[693.91839599609375, 0.0, 665.73150634765625],
@@ -142,21 +143,23 @@ We encourage users to consult the comprehensive [annotation guide](https://githu
 [0.0, 0.0, 1.0]]
 ```  
 - The camera extrinsic matrix could be calculated by `annotator_camextr.py`. The `img_file` is the path of image to be annotated. As illustrated below, after annotating the ground corners `ABCD` (! be sure to follow the ABCD order), the camera extrinsic parameters (world to camera transformation) will be computed with Perspective-n-Point (PnP) algorithm. Camera intrinsic matrix `CamIntr.txt` and extrinsic matrix `CamExtr.txt` will be saved in `save_folder`. 
-![cam_calib](./cam_calib.png)
+![cam_calib](./cam_calib.png) -->
   
 
-##### 2. Coarse human pose estimation
-We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. 
-1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.  
-2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder. 
-3) SMPL related resources and pretrained models: 
-[SMPL](https://smpl.is.tue.mpg.de/) v1.0 and additional resources from [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) are used in this step. 
-- [J_regressor_extra.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_extra.npy?versionId=CAEQHhiBgIDD6c3V6xciIGIwZDEzYWI5NTBlOTRkODU4OTE1M2Y4YTI0NTVlZGM1)
-- [J_regressor_h36m.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_h36m.npy?versionId=CAEQHhiBgIDE6c3V6xciIDdjYzE3MzQ4MmU4MzQyNmRiZDA5YTg2YTI5YWFkNjRi)
-- [smpl_mean_params.npz](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/smpl_mean_params.npz?versionId=CAEQHhiBgICN6M3V6xciIDU1MzUzNjZjZGNiOTQ3OWJiZTJmNThiZmY4NmMxMTM4)
-- [Pretrained models](https://github.com/open-mmlab/mmhuman3d/blob/main/configs/spin/README.md) 
+##### 1. Coarse human pose estimation
+We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses.
 
-Download the resources and arrange them like:
+1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
+2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder.  <br>
+3) SMPL related resources and pretrained models:  <br>
+[SMPL](https://smpl.is.tue.mpg.de/) v1.0 and additional resources from [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) are used in this step.  <br>
+
+   - [J_regressor_extra.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_extra.npy?versionId=CAEQHhiBgIDD6c3V6xciIGIwZDEzYWI5NTBlOTRkODU4OTE1M2Y4YTI0NTVlZGM1)
+   - [J_regressor_h36m.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_h36m.npy?versionId=CAEQHhiBgIDE6c3V6xciIDdjYzE3MzQ4MmU4MzQyNmRiZDA5YTg2YTI5YWFkNjRi)
+   - [smpl_mean_params.npz](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/smpl_mean_params.npz?versionId=CAEQHhiBgICN6M3V6xciIDU1MzUzNjZjZGNiOTQ3OWJiZTJmNThiZmY4NmMxMTM4)
+   - [Pretrained models](https://github.com/open-mmlab/mmhuman3d/blob/main/configs/spin/README.md) 
+
+Download the resources and arrange them like:<br>
 
 ```text
 mmhuman3d
@@ -186,25 +189,30 @@ mmhuman3d
         └── mpi_inf_3dhp_fits.npy
 ```
 
-To extract human poses from the input images or video with the human tracking and pose estimation, you can `cd mmhuman3d` and run:
-```
+To extract human poses from the input images or video with the human tracking and pose estimation, you can `cd mmhuman3d` and run:<br>
+
+```bash
 python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints/spin_pretrained.pth --multi_person_demo --tracking_config demo/mmtracking_cfg/deepsort_faster-rcnn_fpn_4e_mot17-private-half.py --input_path L:/h2tc_dataset/002870/processed/rgbd0 --show_path vis_results/002870.mp4 --smooth_type savgol --speed_up_type deciwatch --draw_bbox --output vis_results/
 ```
-The human poses are stored in folder `vis_results/inference_result.npz` with smpl format. 
 
-##### 3. Multi-modal based human pose optimization
+The human poses are stored in folder `vis_results/inference_result.npz` with smpl format. <br>
+
+##### 2. Multi-modal based human pose optimization
 
 ###### Steps:
-1. Installation:
-```
+1. Installation:<br>
+   
+```bash
 conda create -n pose python=3.7
 conda activate pose
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
 pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pyglet==1.5.15,tensorboard,git+https://github.com/nghorbani/configer,torchgeometry==0.1.2,smplx==0.1.28
 ```
-2. Download [smplh](https://mano.is.tue.mpg.de/)
-3. File structure:
-    ```
+
+1. Download [smplh](https://mano.is.tue.mpg.de/)<br>
+2. File structure:<br>
+   
+    ```text
     pose_reconstruction_frommm
     |--config.py
     |--fitting_utls.py
@@ -214,24 +222,28 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
     |--smplh_male.npz       # smplh model (male)
     |--fit_h2tc_mm.cfg      # config file
     ```
-4. Run the multi-modal optimizer to to optimize the human poses with the opti-track data and glove hands.
 
-```pyhton
+3. Run the multi-modal optimizer to to optimize the human poses with the opti-track data and glove hands. <br>
+
+```bash
 python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-path <h2tc_takeid_processed_folder> --mmhuman <mmhuman_file> --out <out_pose_folder>
 ```
 
-- `<h2tc_takeid_processed_folder>`: the processed folder, like `root/002870/processed/rgbd0`.
+<small > `<h2tc_takeid_processed_folder>`: the processed folder, like `root/002870/processed/rgbd0`. </small><br>
 
-- `<mmhuman_file>`: the coarse pose file extracted from [Coarse human pose estimation](#2-coarse-human-pose-estimation), like `root/vis_results/inference_result.npz`
+<small > `<mmhuman_file>`: the coarse pose file extracted from [Coarse human pose estimation](#2-coarse-human-pose-estimation), like `root/vis_results/inference_result.npz`</small><br>
 
-- `<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz`  
+<small > `<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz` </small><br>
 
 ###### Optimization Algorithm:
+
 Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results.    
 
 Given the coarse [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) pose estimation $\mathcal{M}_{mmh}$, OptiTrack head and hands tracking points $\mathcal{H}$  and glove hands poses $\Theta_{hand}$, we aim to recover the accurate human poses $\mathcal{M_{acc}}$. Our optimization objective is: 
 
-$\min _{\mathcal{M}_{acc} } \mathcal{C}_\text{trk} + \mathcal{C}_\text{wst} +\mathcal{C}_\text{smo}$     
+```latex
+$\min _{\mathcal{M}_{acc} } \mathcal{C}_\text{trk} + \mathcal{C}_\text{wst} +\mathcal{C}_\text{smo}$    
+``` 
 
 The OptiTrack term $\mathcal{C}_\text{trk}$ measures how well the posed body model match the OptiTrack points $\mathbf{P}_t = \left \{ \mathbf{d}_t^i \right \}_{i=0}^{3} $ for head and two-hand points at each frame $t$. We use the mesh corresponding vertices $\mathbf{V}_t$ (index 411 for the head OptiTrack data, 5459 for the right hand aand 2213 for the left hand) to compute 
 
