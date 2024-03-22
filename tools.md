@@ -270,22 +270,23 @@ Independent frame-by-frame pose estimation always causes temporally inconsistent
 ```
 
 $\mathbf{J}_t$ is the joint position at time $t$.
-Bone lengths $l_t^j$ are from $\mathbf{J}_t^j$ at each step. 
+Bone lengths $l_t^j$ are from $\mathbf{J}_t^j$ at each step.  <br>
 
-For hands pose, we already have captured the two hands poses $ \mathbf{\Theta}_{\text{hand}}$ in each capturing. We map them to SMPLH hands pose directly. 
+For hands pose, we already have captured the two hands poses $ \mathbf{\Theta}_{\text{hand}}$ in each capturing. We map them to SMPLH hands pose directly.  <br>
 
-We initialize the optimization processing with the mmhuman poses. All $\lambda$ are weights to decide the contribution of each term.   
+We initialize the optimization processing with the mmhuman poses. All $\lambda$ are weights to decide the contribution of each term.  <br>  
 
 ##### Retargeting
+
 ###### 1. Smplh sequence pose -> General format animation (.fbx)
-###### Steps:
+
 1. Installation: 
-   a. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312).
+   a. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312).  
     b. Open `SMPL-to-FBX-main` and `pip install -r requirements.txt`
 2. SMPLX fbx: 
    Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
 3. Here's the file structure:
-    ```
+    ```text
     SMPL-to-FBX-main
     |--Convert.py
     |--SMPLXObject.py
@@ -300,17 +301,16 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 4. `python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>` to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
    
 ##### 2. Retargeting 
+
 We use Unity 3D (2022.3.17) to demo the retargeting. 
 Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the steps:
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
+
 1. Model rigging: given a mesh model, bound the mesh vertices to bones
 2. Specifying the corresponding skeleton joints between rigged model A and B: unity3d automatically solve it after setting the rigged models as `humanoid` in `animation type`.
 3. Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](https://zhuanlan.zhihu.com/p/78377681). 
 
-
-
-<!-- ![demo](./demo.gif) -->
-
+Four examples of motion construction and re-target are shown below:
 
 <table >
     <tr>
