@@ -296,4 +296,18 @@ Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) fi
 
 
 
-![demo](./demo.gif)
+<!-- ![demo](./demo.gif) -->
+
+
+<table >
+    <tr>
+        <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/1.gif" width=350></td>
+        <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/2.gif" width=350></td>
+        <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/3.gif" width=350></td>
+    </tr>
+        <tr>
+        <td > Rigid objects</td>
+        <td > Soft objects  </td>
+        <td > 3D printed objects </td>
+    </tr>
+</table>
