@@ -160,7 +160,7 @@ We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimat
 
 Download the resources and arrange them like:
 
-    ```text
+```text
     mmhuman3d
     ├── mmhuman3d
     ├── docs
@@ -186,7 +186,7 @@ Download the resources and arrange them like:
             ├── lsp_fits.npy
             ├── mpii_fits.npy
             └── mpi_inf_3dhp_fits.npy
-    ```
+```
 
 To extract human poses from the input images or video with the human tracking and pose estimation, you can `cd mmhuman3d` and run:<br>
 
@@ -234,25 +234,29 @@ python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-pa
 
 ###### Optimization Algorithm:
 
-Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results.    
+Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results. <br>   
 
-Given the coarse [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) pose estimation $\mathcal{M}_{mmh}$, OptiTrack head and hands tracking points $\mathcal{H}$  and glove hands poses $\Theta_{hand}$, we aim to recover the accurate human poses $\mathcal{M_{acc}}$. Our optimization objective is: 
+Given the coarse [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) pose estimation $\mathcal{M}_{mmh}$, OptiTrack head and hands tracking points $\mathcal{H}$  and glove hands poses $\Theta_{hand}$, we aim to recover the accurate human poses $\mathcal{M_{acc}}$. Our optimization objective is: <br>
 
+```math
+\min _{\mathcal{M}_{acc} } \mathcal{C}_\text{trk} + \mathcal{C}_\text{wst} +\mathcal{C}_\text{smo}  
+```
 
-$$\min _{\mathcal{M}_{acc} } \mathcal{C}_\text{trk} + \mathcal{C}_\text{wst} +\mathcal{C}_\text{smo}$$  
- 
+The OptiTrack term $\mathcal{C}_\text{trk}$ measures how well the posed body model match the OptiTrack points $\mathbf{P}_t = \left \{ \mathbf{d}_t^i \right \}_{i=0}^{3} $ for head and two-hand points at each frame $t$. We use the mesh corresponding vertices $\mathbf{V}_t$ (index 411 for the head OptiTrack data, 5459 for the right hand aand 2213 for the left hand) to compute <br>
 
-The OptiTrack term $\mathcal{C}_\text{trk}$ measures how well the posed body model match the OptiTrack points $\mathbf{P}_t = \left \{ \mathbf{d}_t^i \right \}_{i=0}^{3} $ for head and two-hand points at each frame $t$. We use the mesh corresponding vertices $\mathbf{V}_t$ (index 411 for the head OptiTrack data, 5459 for the right hand aand 2213 for the left hand) to compute 
-
-$\mathcal{C}_\text{trk} =\lambda _\text{trk}\sum_{t=0}^{T}\sum_{i=0}^{3} \mathop{\min}_{\mathbf{v}_t^i}\left \| \mathbf{v}_t^i- \mathbf{d}_t^i \right \| ^2$ 
+```math
+\mathcal{C}_\text{trk} =\lambda _\text{trk}\sum_{t=0}^{T}\sum_{i=0}^{3} \mathop{\min}_{\mathbf{v}_t^i}\left \| \mathbf{v}_t^i- \mathbf{d}_t^i \right \| ^2
+```
 
 <!-- $\mathcal{C}_\text{trk} =\lambda _\text{trk}\sum_{t=0}^{T}\sum_{i=0}^{3}\omega_b  \mathop{\min}_{\mathbf{v}_t^i}\left \| \mathbf{v}_t^i- \mathbf{d}_t^i \right \| ^2$.  -->
 
 <!-- $\omega_b$ is the robust bisquare weight based on the Chamfer distance.   -->
 
-The wrist cost $\mathcal{C}_\text{wst}$ is used to disambiguate the right/left wrist pose guided by hands tracking information. Meanwhile, the cost also contributes to recovering accurate whole-arm poses even in severe occlusions.   We use the hand OptiTrack pose $\mathbf{O}_t^{\text{hand}} = \left \{ \mathbf{o}_t^h \right \}_{i=0}^1$ to calculate the right $h=0$ and the left $h=1$ wrist loss. It is formulated as 
+The wrist cost $\mathcal{C}_\text{wst}$ is used to disambiguate the right/left wrist pose guided by hands tracking information. Meanwhile, the cost also contributes to recovering accurate whole-arm poses even in severe occlusions.   We use the hand OptiTrack pose $\mathbf{O}_t^{\text{hand}} = \left \{ \mathbf{o}_t^h \right \}_{i=0}^1$ to calculate the right $h=0$ and the left $h=1$ wrist loss. It is formulated as <br>
 
-$\mathcal{C}_\text{wri} =\lambda _\text{wri}\sum_{t=0}^{T}\sum_{h=0}^{1}\left \| {\mathbf{v}_\text{wri}}_t^h-\mathbf{o}_t^h \right \| ^2 $
+```math
+\mathcal{C}_\text{wri} =\lambda _\text{wri}\sum_{t=0}^{T}\sum_{h=0}^{1}\left \| {\mathbf{v}_\text{wri}}_t^h-\mathbf{o}_t^h \right \| ^2 
+```
 
 where ${\mathbf{v}_\text{wri}}_t^h$ is the SMPLH right/left wrist pose.   
 
