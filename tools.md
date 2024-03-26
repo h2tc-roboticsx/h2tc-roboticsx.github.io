@@ -100,7 +100,7 @@ We suggest users to visit our GitHub repository for more detailed, step-by-step 
 ```bash
 python src/extract.py --srcpath raw_data_path --tarpath your_path
 ``` 
-<small >`--srcpath` is where you download the packed raw data. `--tarpath` is the target path where you want to extract the raw data. </small><br>
+<small >`--srcpath` is where the downloaded raw data is stored. `--tarpath` is the target path where you want to extract the raw data. </small><br>
 
 <b>Step 3</b>: Process the Extracted Data. After the data has been extracted and organized appropriately, run the [processor](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/process.py) :
 ```bash
