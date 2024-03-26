@@ -86,7 +86,7 @@ We refer users to [data processing tutorials](https://github.com/h2tc-roboticsx/
         <td style="text-align: left;">OptiTrack</td>
         <td style="text-align: left;">Local and global transformatiom matrices</td>
         <td style="text-align: left;">.CSV</td>
-        <td style="text-align: left;">Body motio in throw-catch frame</td>
+        <td style="text-align: left;">Body motion in throw-catch frame</td>
         <td style="text-align: left;">.CSV</td>
     </tr>
 </table>
