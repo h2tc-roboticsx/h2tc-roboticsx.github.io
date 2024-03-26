@@ -219,7 +219,7 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
     |--fit_h2tc_mm.cfg      # config file
     ```
 
-4. Run the multi-modal optimizer to to optimize the human poses with the opti-track data and glove hands. <br>
+4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
 
 ```bash
 python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-path <h2tc_takeid_processed_folder> --mmhuman <mmhuman_file> --out <out_pose_folder>
