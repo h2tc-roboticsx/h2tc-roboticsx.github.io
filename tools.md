@@ -240,7 +240,7 @@ $$
 \min _{\mathcal{M}_{acc} } \mathcal{C}_\text{trk} + \mathcal{C}_\text{wst} +\mathcal{C}_\text{smo}  
 $$
 
-The OptiTrack term $\mathcal{C}_\text{trk}$ measures how well the posed body model match the OptiTrack points $\mathbf{P}_t = \left \{ \mathbf{d}_t^i \right \}_{i=0}^{3}$ for head and two-hand points at each frame $t$. We use the mesh corresponding vertices $\mathbf{V}_t$ (index 411 for the head OptiTrack data, 5459 for the right hand aand 2213 for the left hand) to compute <br>
+The OptiTrack term $\mathcal{C}_\text{trk}\$ measures how well the posed body model match the OptiTrack points $\mathbf{P}_t = \left \{ \mathbf{d}_t^i \right \}_{i=0}^{3}\$ for head and two-hand points at each frame $t$. We use the mesh corresponding vertices $\mathbf{V}_t$ (index 411 for the head OptiTrack data, 5459 for the right hand aand 2213 for the left hand) to compute <br>
 
 $$
 \mathcal{C}_\text{trk} =\lambda _\text{trk}\sum_{t=0}^{T}\sum_{i=0}^{3} \mathop{\min}_{\mathbf{v}_t^i}\left \| \mathbf{v}_t^i- \mathbf{d}_t^i \right \| ^2
