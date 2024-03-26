@@ -289,7 +289,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 2. SMPLX fbx: 
    
-    Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
+    Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
 
 3. Here's the file structure:
    
