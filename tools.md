@@ -108,7 +108,7 @@ python src/process.py --datapath your_path/data
 ```
 <small >`--datapath` is where your extracted data is located. </small><br>
 
-We encourage users to consult the [data processing](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) documentation for complete technical details on how we process the multi-modal and cross-device raw data. Additionally, refer to the [data file explanation](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our [technical paper](https://h2tc-roboticsx.github.io/underreview/) for a detailed introduction to the data hierarchy and the content of each involved data file.
+We refer users to the [data processing](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) documentation for complete technical details on how we process the multi-modal and cross-device raw data. Additionally, take a look at the [data file explanation](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our [technical paper](https://h2tc-roboticsx.github.io/underreview/) for a detailed introduction to the data hierarchy and the content of each involved data file.
 
 #### Annotator
 
