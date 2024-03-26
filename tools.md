@@ -94,7 +94,7 @@ We refer users to [data processing tutorials](https://github.com/h2tc-roboticsx/
 
 We suggest users to visit our GitHub repository for more detailed, step-by-step [instructions](https://github.com/h2tc-roboticsx/H2TC/blob/main#data-processing) on processing the data from scratch. Briefly, users can follow the three steps below to process the raw data:<br> 
 
-<b>Step 1</b>: Fetch the Raw Data. You can access all recorded raw data from [Dropbox](https://h2tc-roboticsx.github.io/notpubyet/). The raw data of each recorded throw&catch activity is packaged packed in a `.zip` file. <br>
+<b>Step 1</b>: Fetch the Raw Data. You can access all recorded raw data from [Dropbox](https://h2tc-roboticsx.github.io/notpubyet/). The raw data of each recorded throw&catch activity is compressed in a `.zip` file. <br>
 
 <b>Step 2</b>: Extract the Raw Data. We provide a scripted data [extractor](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/extract.py) to unzip the packaged raw data and organize all raw files in an appropriate data hierarchy, as previously mentioned.
 ```bash
