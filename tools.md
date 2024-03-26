@@ -15,6 +15,8 @@ This page offers tools for recording, processing, annotating, and reconstructing
     (3) [Annotator](#annotator) offers an interactive interface that enables users to visually validate and annotate each recorded throw&catch activity with a hierarchy of semantic and dense labels. <br>
     (4) [Human motion constructor](#Human-motion-construction-and-retarget) constructs and optimizes human motions using multi-modal data streams in the dataset, and re-target the constructed human motions to multiple robots and multi-fingered hands. <br>
 
+​    (5) [Visualization](#Visualization) offers an interactive interface that enables users to visually browse the synchronized frames of all data streams simultaneously in a way like playing videos. <br>
+
 
 #### Data Processing
 
@@ -99,7 +101,7 @@ We suggest users to visit our GitHub repository for more detailed, step-by-step 
 <b>Step 2</b>: Extract the Raw Data. We provide a scripted data [extractor](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/extract.py) to unzip the packaged raw data and organize all raw files in an appropriate data hierarchy, as previously mentioned.
 ```bash
 python src/extract.py --srcpath raw_data_path --tarpath your_path
-``` 
+```
 <small >`--srcpath` is where the downloaded raw data is stored. `--tarpath` is the target path where you want to extract the raw data. </small><br>
 
 <b>Step 3</b>: Process the Extracted Data. After the data has been extracted and organized appropriately, run the [processor](https://github.com/h2tc-roboticsx/H2TC/blob/main/src/process.py) :
@@ -139,7 +141,7 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 [[693.91839599609375, 0.0, 665.73150634765625],
 [0.0, 693.91839599609375, 376.775787353515625],
 [0.0, 0.0, 1.0]]
-```  
+```
 - The camera extrinsic matrix could be calculated by `annotator_camextr.py`. The `img_file` is the path of image to be annotated. As illustrated below, after annotating the ground corners `ABCD` (! be sure to follow the ABCD order), the camera extrinsic parameters (world to camera transformation) will be computed with Perspective-n-Point (PnP) algorithm. Camera intrinsic matrix `CamIntr.txt` and extrinsic matrix `CamExtr.txt` will be saved in `save_folder`. 
 ![cam_calib](./cam_calib.png) -->
   
@@ -313,7 +315,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 ```
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
-   
+
 ##### Retargeting 
 
 We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps:
@@ -341,5 +343,32 @@ Four examples of motion construction and re-targeting using our dataset are show
 </table>
 
 
+#### Visualization
 
+The first step of using our visualization tool is to prepare the processed data. This can be done by the provided [processor](#data-processing). Alternatively, for a quick browse, we offer the processed data of several sample takes that can be directly downloaded from [here](https://h2tc-roboticsx.github.io/dataset/#sample-cases). Eventually, you should have the data stored in a path similar to this: `PARENT_PATH/data/take_id/processed`.
 
+Now you can run the following command to launch the visualization tool:
+
+```python
+python src/visualization python src/visualize.py --datapath PARENT_PATH/data --take take_id --speed 120
+```
+
+The argument `--take` specifies the ID of the take to be visualized if set, otherwise the first take under the given path will be loaded. `--speed` specifies the FPS for playing the frames of streams.
+
+Once the interface is launched, you can navigate the visualization through the following operations:
+
+1. `space`: play/pause the videos of all streams
+2. `right arrow`: pause the video if played and forward to the next frame
+3. `left arrow`: pause the video if played and backward to the last frame
+
+Below is an example of visualizing a take:
+
+<div class="container" style="width: 100%;">
+    <div class="row">
+        <div class="col-lg-16">
+    		<video muted autoplay loop width="100%">
+        		<source src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/videos/visualization.mp4" type="video/mp4">
+    		</video>
+        </div>
+    </div>
+</div>
