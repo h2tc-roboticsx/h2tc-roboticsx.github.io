@@ -270,7 +270,7 @@ Independent frame-by-frame pose estimation always causes temporally inconsistent
 $\mathbf{J}_t$ is the joint position at time $t$.
 Bone lengths $l_t^j$ are from $\mathbf{J}_t^j$ at each step.  <br>
 
-For hands pose, we already have captured the two hands poses $ \mathbf{\Theta}_{\text{hand}}$ in each capturing. We map them to SMPLH hands pose directly.  <br>
+For hands pose, we already have captured the two hands poses $\mathbf{\Theta_{\text{hand}}$ in each capturing. We map them to SMPLH hands pose directly.  <br>
 
 We initialize the optimization processing with the mmhuman poses. All $\lambda$ are weights to decide the contribution of each term.  <br>  
 
