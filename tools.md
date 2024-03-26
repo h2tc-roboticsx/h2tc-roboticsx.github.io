@@ -157,7 +157,7 @@ We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimat
    - [smpl_mean_params.npz](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/smpl_mean_params.npz?versionId=CAEQHhiBgICN6M3V6xciIDU1MzUzNjZjZGNiOTQ3OWJiZTJmNThiZmY4NmMxMTM4)
    - [Pretrained models](https://github.com/open-mmlab/mmhuman3d/blob/main/configs/spin/README.md) 
 
-Download the resources and arrange them like:
+Download the resources and arrange them as follows:
 
 ```text
     mmhuman3d
