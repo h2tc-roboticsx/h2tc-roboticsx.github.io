@@ -334,7 +334,7 @@ Four selected examples of motion construction and re-target are shown below: <br
     <tr>
         <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/1.gif" width=350></td>
         <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/2.gif" width=350></td>
-        <td  width=410><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/3.gif" width=350></td>
+        <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/3.gif" width=350></td>
         <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/4.gif" width=350></td>
     </tr>
 </table>
