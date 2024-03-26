@@ -316,7 +316,7 @@ to start converting. The animation file will save in `<output_path>`. You can op
    
 ##### Retargeting 
 
-We use Unity 3D (2022.3.17) to demo the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the steps:
+We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps:
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
 
 1. Model rigging: given a mesh model, bound the mesh vertices to bones <br>
