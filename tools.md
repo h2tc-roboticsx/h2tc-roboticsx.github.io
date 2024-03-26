@@ -114,7 +114,7 @@ We refer users to the [data processing](https://github.com/h2tc-roboticsx/H2TC/b
 
 The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables users to visually segment and annotate each recorded activity with a hierarchy of semantic and dense [annotations](https://h2tc-roboticsx.github.io/dataset/#-Annotation). Overall, it provides: <br>
 (1) An interactive annotation interface: The interface displays all synchronized streams in an interactive window, as shown below, allowing users to inspect and annotate each recording frame by frame. <br>
-(2) A variety of annotation operations: Users can easily interact with the interface to label segmentation and annotations using keyboard operations. <br>
+(2) A variety of annotation operations: Users can easily interact with the interface to label temporal segmentation and annotations using keyboard operations. <br>
 (3) An information panel: The annotation results are displayed in real-time in the information panel. Any modifications to the annotation results are immediately saved in the corresponding annotation file. <br>
 
 
