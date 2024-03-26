@@ -92,7 +92,7 @@ We refer users to [data processing tutorials](https://github.com/h2tc-roboticsx/
 </table>
 <br>
 
-We encourage users to visit our GitHub repository for more detailed, step-by-step [instructions](https://github.com/h2tc-roboticsx/H2TC/blob/main#data-processing) on processing the data from scratch. Briefly, users can follow the three steps below to process the raw data:<br> 
+We suggest users to visit our GitHub repository for more detailed, step-by-step [instructions](https://github.com/h2tc-roboticsx/H2TC/blob/main#data-processing) on processing the data from scratch. Briefly, users can follow the three steps below to process the raw data:<br> 
 
 <b>Step 1</b>: Fetch the Raw Data. You can access all recorded raw data from [Dropbox](https://h2tc-roboticsx.github.io/notpubyet/). The raw data of each recorded throw&catch activity is packaged packed in a `.zip` file. <br>
 
