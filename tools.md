@@ -150,7 +150,7 @@ We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimat
 1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
 2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder.  <br>
 3) SMPL related resources and pretrained models: 
-[SMPL](https://smpl.is.tue.mpg.de/) v1.0 and additional resources from [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) are used in this step.  <br>
+[SMPL](https://smpl.is.tue.mpg.de/) v1.0 and some other resources from [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) that are needed in this step.  <br>
 
    - [J_regressor_extra.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_extra.npy?versionId=CAEQHhiBgIDD6c3V6xciIGIwZDEzYWI5NTBlOTRkODU4OTE1M2Y4YTI0NTVlZGM1)
    - [J_regressor_h36m.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_h36m.npy?versionId=CAEQHhiBgIDE6c3V6xciIDdjYzE3MzQ4MmU4MzQyNmRiZDA5YTg2YTI5YWFkNjRi)
