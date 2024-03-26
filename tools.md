@@ -237,7 +237,7 @@ Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/
 Given the coarse [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) pose estimation $\mathcal{M_{mmh}}$, OptiTrack head and hands tracking points $\mathcal{H}$  and glove hands poses $\Theta_{hand}$, we aim to recover the accurate human poses $\mathcal{M_{acc}}$. Our optimization objective is: <br>
 
 $$
-\min _{\mathcal{M_{acc} } \mathcal{C_{trk}} + \mathcal{C_{wst}} +\mathcal{C_{smo}}  
+\min _{\mathcal{M_{acc}} } \mathcal{C_{trk}} + \mathcal{C_{wst}} +\mathcal{C_{smo}}  
 $$
 
 The OptiTrack term $\mathcal{C_{trk}}$ measures how well the posed body model match the OptiTrack points 
