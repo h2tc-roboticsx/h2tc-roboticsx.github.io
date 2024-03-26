@@ -131,7 +131,7 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 We recommend users to read the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
 
-#### Human Motion Construction and Retarget 
+#### Human Motion Construction and Retargeting 
 
 <!-- ##### 1. Camera calibration
 - The camera intrinsic matrix is:
@@ -145,6 +145,7 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
   
 
 ##### Coarse human pose estimation
+
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
 1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
 2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder.  <br>
