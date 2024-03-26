@@ -193,7 +193,7 @@ To extract human poses from the input images or video with the human tracking an
 python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints/spin_pretrained.pth --multi_person_demo --tracking_config demo/mmtracking_cfg/deepsort_faster-rcnn_fpn_4e_mot17-private-half.py --input_path L:/h2tc_dataset/002870/processed/rgbd0 --show_path vis_results/002870.mp4 --smooth_type savgol --speed_up_type deciwatch --draw_bbox --output vis_results/
 ```
 
-The human poses are stored in folder `vis_results/inference_result.npz` with smpl format. <br>
+The human poses will be stored in `vis_results/inference_result.npz` with smpl format. <br>
 
 ##### Multi-modal based human pose optimization
 
