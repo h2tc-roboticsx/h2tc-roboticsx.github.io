@@ -187,7 +187,7 @@ Download the resources and arrange them as follows:
             └── mpi_inf_3dhp_fits.npy
 ```
 
-To extract human poses from the input images or video with the human tracking and pose estimation, you can `cd mmhuman3d` and run:<br>
+To extract human poses from the input images or video with the human tracking and pose estimation, you can first `cd mmhuman3d` and then run:<br>
 
 ```bash
 python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints/spin_pretrained.pth --multi_person_demo --tracking_config demo/mmtracking_cfg/deepsort_faster-rcnn_fpn_4e_mot17-private-half.py --input_path L:/h2tc_dataset/002870/processed/rgbd0 --show_path vis_results/002870.mp4 --smooth_type savgol --speed_up_type deciwatch --draw_bbox --output vis_results/
