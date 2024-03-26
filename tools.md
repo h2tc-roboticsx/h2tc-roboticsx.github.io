@@ -252,7 +252,7 @@ $$
 
 <!-- $\omega_b$ is the robust bisquare weight based on the Chamfer distance.   -->
 
-The wrist cost $\mathcal{C}_\text{wst}$ is used to disambiguate the right/left wrist pose guided by hands tracking information. Meanwhile, the cost also contributes to recovering accurate whole-arm poses even in severe occlusions.   We use the hand OptiTrack pose $\mathbf{O}_t^{\text{hand}} = \left \{ \mathbf{o}_t^h \right \}_{i=0}^1$ to calculate the right $h=0$ and the left $h=1$ wrist loss. It is formulated as <br>
+The wrist cost $\mathcal{C}_\text{wst}$ is used to disambiguate the right/left wrist pose guided by hands tracking information. Meanwhile, the cost also contributes to recovering accurate whole-arm poses even in severe occlusions. We use the hand OptiTrack pose $$\mathbf{O}_t^{\text{hand}} = \left \{ \mathbf{o}_t^h \right \}_{i=0}^1$$ to calculate the right $h=0$ and the left $h=1$ wrist loss. It is formulated as <br>
 
 $$
 \mathcal{C}_\text{wri} =\lambda _\text{wri}\sum_{t=0}^{T}\sum_{h=0}^{1}\left \| {\mathbf{v}_\text{wri}}_t^h-\mathbf{o}_t^h \right \| ^2 
