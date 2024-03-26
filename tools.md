@@ -20,7 +20,7 @@ This page offers tools for recording, processing, annotating, and reconstructing
 
 The [processor](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) synchronizes all data streams captured from different sensors and converts the raw data into processed data in commonly used formats, as listed below. 
 All data, both raw and processed, are stored alongside a variety of supporting files and organized in a hierarchical manner. 
-We encourage users to consult the [data processing tutorials](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) documentation,
+We refer users to [data processing tutorials](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/processing_tech_details.md) documentation,
  [data explanation](https://github.com/h2tc-roboticsx/H2TC/blob/main/doc/data_file_explanation.md) and our [technical paper](https://h2tc-roboticsx.github.io/underreview/) for a detailed introduction to the data hierarchy and the content of each involved data file.<br>
 
 <table style="width: 100%; margin-left: 0%; margin-right: 0%;">
