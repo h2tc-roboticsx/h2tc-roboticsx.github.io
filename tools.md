@@ -128,7 +128,7 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 
 <br>
 
-We encourage users to consult the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
+We recommend users to read the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
 
 #### Human Motion Construction and Retarget 
