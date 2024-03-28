@@ -14,7 +14,7 @@ This page offers tools for recording, processing, annotating, and reconstructing
     <!-- (3) <a href="https://lipengroboticsx.github.io/tools/#-annotator">annotator</a>  -->
     (3) [Annotator](#annotator) offers an interactive interface that enables users to visually validate and annotate each recorded throw&catch activity with a hierarchy of semantic and dense labels. <br>
     (4) [Human motion constructor](#Human-motion-construction-and-retarget) constructs and optimizes human motions using multi-modal data streams in the dataset, and re-target the constructed human motions to multiple robots and multi-fingered hands. <br>
-​    (5) [Visualization](#Visualization) offers an interactive interface that enables users to visually browse the synchronized frames of all data streams simultaneously in a way like playing videos. <br>
+​   (5) [Visualization](#Visualization) offers an interactive interface that enables users to visually browse the synchronized frames of all data streams simultaneously in a way like playing videos. <br>
 
 
 #### Data Processing
