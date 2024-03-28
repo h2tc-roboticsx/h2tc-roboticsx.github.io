@@ -80,7 +80,7 @@ If you use our Dataset, please consider citing
 ```
 @article{lipeng2023h2tc,
   title={Advancing Robots with Greater Dynamic Dexterity: A Large-Scale Multi-View and Multi-Modal Dataset of Human-Human Throw&Catch of Arbitrary Objects},
-  author={Lipeng, Chen and Jianing, Qiu and Lin, Li and Guoyi, Chi and Yu, Zheng},
+  author={Lipeng, Chen* and Jianing, Qiu* and Lin, Li* and Xi Luo and Guoyi, Chi and Yu, Zheng},
   journal={arXiv},
   year={2023}
 }
