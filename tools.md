@@ -68,12 +68,14 @@ We refer users to [data processing tutorials](https://github.com/h2tc-roboticsx/
         <td style="text-align: left;" rowspan="4">MoCap Pro</td>
         <td style="text-align: left;">Sensors&#39; reading and hand joint angles</td>
         <td style="text-align: left;">.CSV</td>
-        <td style="text-align: left;" rowspan="4">Hand joint motion</td>
-        <td style="text-align: left;" rowspan="4">.CSV</td>
+        <td style="text-align: left;">Hand joint motion</td>
+        <td style="text-align: left;">.CSV</td>
     </tr>
     <tr  >
         <td style="text-align: left;" >Hand calibration parameters</td>
         <td style="text-align: left;" >.CAL</td>
+        <td style="text-align: left;">Hand joint positions</td>
+        <td style="text-align: left;">.JSON</td>
     </tr>
     <tr  >
         <td style="text-align: left;">3D animation visualization</td>
