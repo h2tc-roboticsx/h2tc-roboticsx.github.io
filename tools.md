@@ -198,7 +198,7 @@ python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints
 
 The human poses will be stored in `vis_results/inference_result.npz` with smpl format. <br>
 
-##### Multi-modal based human pose optimization
+##### Multi-modal based human pose optimization  <br>
 
 1. Installation:<br>
 ```bash
