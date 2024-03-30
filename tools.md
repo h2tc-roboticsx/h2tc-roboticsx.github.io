@@ -200,7 +200,7 @@ The human poses will be stored in `vis_results/inference_result.npz` with smpl f
 
 ##### Multi-modal based human pose optimization  <br>
 
-&emsp; 1. Installation:<br>
+&ensp;; 1. Installation:<br>
 ```bash
 conda create -n pose python=3.7
 conda activate pose
