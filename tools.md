@@ -282,9 +282,9 @@ For hands pose, we already have captured the two hands poses $\Theta_{hand}$ in 
 
 We initialize the optimization processing with the mmhuman poses. All $\lambda$ are weights to decide the contribution of each term.  <br>  
 
-##### Retargeting
+#### Retargeting
 
-###### Smplh sequence pose -> General format animation (.fbx) <br>
+##### Smplh sequence pose -> General format animation (.fbx) <br>
 
 &ensp; 1. Installation: 
 
