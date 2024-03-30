@@ -210,8 +210,8 @@ conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
 pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pyglet==1.5.15,tensorboard,git+https://github.com/nghorbani/configer,torchgeometry==0.1.2,smplx==0.1.28
 ```
 
-2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
-3. File structure:
+&ensp; 2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
+&ensp; 3. File structure:
    
     ```text
     pose_reconstruction_frommm
@@ -224,7 +224,7 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
     |--fit_h2tc_mm.cfg      # config file
     ```
 
-4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
+&ensp; 4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
 
 ```bash
 python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-path <h2tc_takeid_processed_folder> --mmhuman <mmhuman_file> --out <out_pose_folder>
@@ -286,17 +286,17 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 ###### Smplh sequence pose -> General format animation (.fbx) <br>
 
-1. Installation: 
+&ensp; 1. Installation: 
 
     a. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312). 
 
     b. Open `SMPL-to-FBX-main` and `pip install -r requirements.txt`
 
-2. SMPLX fbx: 
+&ensp; 2. SMPLX fbx: 
    
     Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
 
-3. The file structure would be like:
+&ensp; 3. The file structure would be like:
    
     ```text
     SMPL-to-FBX-main
@@ -311,7 +311,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
     |--<output_path>/
     ```
 
-4. Run 
+&ensp; 4. Run 
    
 ```bash
     python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
@@ -324,9 +324,9 @@ to start converting. The animation file will save in `<output_path>`. You can op
 We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps: <br>
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
 
-1. Model rigging: given a mesh model, bound the mesh vertices to bones <br>
-2. Specifying the corresponding skeleton joints between rigged model A and B: Unity 3D automatically solves it after setting the rigged models as `humanoid` in `animation type`.  <br>
-3. Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
+&ensp; 1. Model rigging: given a mesh model, bound the mesh vertices to bones <br>
+&ensp; 2. Specifying the corresponding skeleton joints between rigged model A and B: Unity 3D automatically solves it after setting the rigged models as `humanoid` in `animation type`.  <br>
+&ensp; 3. Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
 
 Four examples of motion construction and re-targeting using our dataset are shown below: <br>
 
@@ -360,9 +360,9 @@ The argument `--take` specifies the ID of the take to be visualized if set, othe
 
 Once the interface is launched, you can navigate the visualization through the following operations:
 
-1. `space`: play/pause the videos of all streams
-2. `right arrow`: pause the video if played and forward to the next frame
-3. `left arrow`: pause the video if played and backward to the last frame
+&ensp; 1. `space`: play/pause the videos of all streams
+&ensp; 2. `right arrow`: pause the video if played and forward to the next frame
+&ensp; 3. `left arrow`: pause the video if played and backward to the last frame
 
 Below is an example of visualizing a take:
 
