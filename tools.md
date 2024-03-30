@@ -360,9 +360,9 @@ The argument `--take` specifies the ID of the take to be visualized if set, othe
 
 Once the interface is launched, you can navigate the visualization through the following operations:
 
-&ensp; 1. `space`: play/pause the videos of all streams
-&ensp; 2. `right arrow`: pause the video if played and forward to the next frame
-&ensp; 3. `left arrow`: pause the video if played and backward to the last frame
+&ensp; 1. `space`: play/pause the videos of all streams <br>
+&ensp; 2. `right arrow`: pause the video if played and forward to the next frame <br>
+&ensp; 3. `left arrow`: pause the video if played and backward to the last frame <br>
 
 Below is an example of visualizing a take:
 
