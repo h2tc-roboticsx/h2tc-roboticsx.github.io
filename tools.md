@@ -126,7 +126,7 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 <table  >
  <tr>
 <td  >
-<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/annotation_tool.png" width=1000>
+<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/annotation_labeled.pdf" width=1000>
 </td>
 </tr>
 </table  >
@@ -212,7 +212,7 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
 
 &ensp; 2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
 &ensp; 3. File structure:
-   
+
     ```text
     pose_reconstruction_frommm
     |--config.py
@@ -289,15 +289,15 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 &ensp; 1. Installation: 
 
     a. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312). 
-
+    
     b. Open `SMPL-to-FBX-main` and `pip install -r requirements.txt`
 
 &ensp; 2. SMPLX fbx: 
-   
+
     Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
 
 &ensp; 3. The file structure would be like:
-   
+
     ```text
     SMPL-to-FBX-main
     |--Convert.py
@@ -312,7 +312,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
     ```
 
 &ensp; 4. Run 
-   
+
 ```bash
     python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
 ```
