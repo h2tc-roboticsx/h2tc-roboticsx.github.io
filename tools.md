@@ -126,7 +126,7 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 <table  >
  <tr>
 <td  >
-<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/annotation_labeled.jpg" width=1000>
+<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/annotator_labeled.jpg" width=1000>
 </td>
 </tr>
 </table  >
