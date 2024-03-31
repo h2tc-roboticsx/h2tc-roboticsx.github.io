@@ -368,12 +368,12 @@ In addition, we provide a new script called `extract_hand_joint_positions.py` to
 
 In both cases, the extracted hand joint positions will be saved in json files, with joint positions of left hand in `left_hand_joint_positions.json` and those of right hand in `right_hand_joint_positions.json`.
 
-20 joint positions are saved, and the json file contains key-value entries with key representing frame number and value being a list of joint positions. In each list, from index 0 to index 19, the saved joint positions are:
+20 joint positions are saved, and the json file contains key-value entries with key representing frame number and value being a list of joint positions. In each list, from index 0 to index 19, the saved joint positions are indicated as below:
 
 <table  >
  <tr>
 <td  >
-<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/hand_joint_position_index.png" width=1000>
+<img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/images/hand_joint_position_index.png" width=200>
 </td>
 </tr>
 </table  >
