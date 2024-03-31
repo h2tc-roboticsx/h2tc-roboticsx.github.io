@@ -14,7 +14,7 @@ This page offers tools for recording, processing, annotating, and reconstructing
     <!-- (3) <a href="https://lipengroboticsx.github.io/tools/#-annotator">annotator</a>  -->
     (3) [Annotator](#annotator) offers an interactive interface that enables users to visually validate and annotate each recorded throw&catch activity with a hierarchy of semantic and dense labels. <br>
     (4) [Human motion constructor](#Human-motion-construction-and-retarget) constructs and optimizes human motions using multi-modal data streams in the dataset, and re-target the constructed human motions to multiple robots and multi-fingered hands. <br>
-    (5) [Hand joint position extraction](#Hand-joint-position-extraction) extracts hand joint positions based on the captured euler joint angles from StretchSense MoCap Pro (SMP) Gloves and defined bone lengths. <br>
+    (5) [Hand joint position extraction](#hand-joint-position-extraction) extracts hand joint positions based on the captured euler joint angles from StretchSense MoCap Pro (SMP) Gloves and defined bone lengths. <br>
     (6) [Visualization](#Visualization) offers an interactive interface that enables users to visually browse the synchronized frames of all data streams simultaneously in a way like playing videos. <br>
 
 
@@ -349,8 +349,6 @@ Four examples of motion construction and re-targeting using our dataset are show
 #### Hand joint position extraction
 
 We extract hand joint positions (i.e., their XYZ 3D locations) based on the euler joint angles captured by Stretchsense MoCap Pro gloves and bone lengths using forward kenamatics. We provide a set of default bone lenghts:
-
-default bone lengths:
 
 ```text
 finger_long['thumb'] = [None, 0.25, 0.11, 0.06]
