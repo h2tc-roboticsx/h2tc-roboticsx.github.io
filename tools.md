@@ -351,11 +351,11 @@ Four examples of motion construction and re-targeting using our dataset are show
 We extract hand joint positions (i.e., their XYZ 3D locations) based on the euler joint angles captured by Stretchsense MoCap Pro gloves and bone lengths using forward kenamatics. We provide a set of default bone lenghts:
 
 ```text
-finger_long['thumb'] = [None, 0.25, 0.11, 0.06]
-finger_long['index'] = [0.34, 0.15, 0.08, 0.06]
-finger_long['middle'] = [0.33, 0.15, 0.10, 0.07]
-finger_long['ring'] = [0.31, 0.13, 0.10, 0.06]
-finger_long['pinky'] = [0.3, 0.08, 0.06, 0.06]
+finger_length['thumb'] = [None, 0.25, 0.11, 0.06]
+finger_length['index'] = [0.34, 0.15, 0.08, 0.06]
+finger_length['middle'] = [0.33, 0.15, 0.10, 0.07]
+finger_length['ring'] = [0.31, 0.13, 0.10, 0.06]
+finger_length['pinky'] = [0.3, 0.08, 0.06, 0.06]
 ```
 
 but users can use their custom bone lengths to adapt to their specific needs and scenarios.
