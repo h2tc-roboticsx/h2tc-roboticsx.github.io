@@ -14,7 +14,7 @@ This page offers tools for recording, processing, annotating, and reconstructing
     <!-- (3) <a href="https://lipengroboticsx.github.io/tools/#-annotator">annotator</a>  -->
     (3) [Annotator](#annotator) offers an interactive interface that enables users to visually validate and annotate each recorded throw&catch activity with a hierarchy of semantic and dense labels. <br>
     (4) [Human motion constructor](#Human-motion-construction-and-retarget) constructs and optimizes human motions using multi-modal data streams in the dataset, and re-target the constructed human motions to multiple robots and multi-fingered hands. <br>
-    (5) [Hand joint position extractor](#Hand-joint-position) extracts hand joint positions based on the captured euler joint angles from StretchSense MoCap Pro (SMP) Gloves and defined bone lengths. <br>
+    (5) [Hand joint position extraction](#Hand-joint-position-extraction) extracts hand joint positions based on the captured euler joint angles from StretchSense MoCap Pro (SMP) Gloves and defined bone lengths. <br>
     (6) [Visualization](#Visualization) offers an interactive interface that enables users to visually browse the synchronized frames of all data streams simultaneously in a way like playing videos. <br>
 
 
@@ -344,6 +344,32 @@ Four examples of motion construction and re-targeting using our dataset are show
         <td  width=450><img src="https://raw.githubusercontent.com/h2tc-roboticsx/h2tc-roboticsx.github.io/main/assets/motion_gif/4.gif" width=350></td>
     </tr>
 </table>
+
+
+#### Hand joint position extraction
+
+We extract hand joint positions (i.e., their XYZ 3D locations) based on the euler joint angles captured by Stretchsense MoCap Pro gloves and bone lengths using forward kenamatics. We provide a set of default bone lenghts:
+
+default bone lengths:
+
+```text
+finger_long['thumb'] = [None, 0.25, 0.11, 0.06]
+finger_long['index'] = [0.34, 0.15, 0.08, 0.06]
+finger_long['middle'] = [0.33, 0.15, 0.10, 0.07]
+finger_long['ring'] = [0.31, 0.13, 0.10, 0.06]
+finger_long['pinky'] = [0.3, 0.08, 0.06, 0.06]
+```
+
+but users can use their custom bone lengths to adapt to their specific needs and scenarios.
+
+Specifically, hand joint position extraction has been integrated into `plot_motion.py`, which will be called by `process.py` during data extraction and processing. This means hand joint positions will be automatically extracted and saved along with other extracted and processed data from the raw zip files.
+
+In addition, we provide a new script called `extract_hand_joint_positions.py` to allow users to extract/adjust hand joint positions separately from the data processing process. 
+
+In both cases, the extracted hand joint positions will be saved in json files, with joint positions of left hand in `left_hand_joint_positions.json` and those of right hand in `right_hand_joint_positions.json`.
+
+20 joint positions are saved, and the json file contains key-value entries with key representing frame number and value being a list of joint positions. In each list, from index 0 to index 19, the saved joint positions are:
+
 
 
 #### Visualization
