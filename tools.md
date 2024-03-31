@@ -362,7 +362,7 @@ but users can use their custom bone lengths to adapt to their specific needs and
 
 Specifically, hand joint position extraction has been integrated into `plot_motion.py`, which will be called by `process.py` during data extraction and processing. This means hand joint positions will be automatically extracted and saved along with other extracted and processed data from the raw zip files.
 
-In addition, we provide a new script called `extract_hand_joint_positions.py` to allow users to extract/adjust hand joint positions separately from the data processing process. 
+In addition, we provide a new script called `src/utils/extract_hand_joint_positions.py` to allow users to extract/adjust hand joint positions separately from the data processing process. 
 
 In both cases, the extracted hand joint positions will be saved in json files, with joint positions of left hand in `left_hand_joint_positions.json` and those of right hand in `right_hand_joint_positions.json`.
 
