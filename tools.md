@@ -347,7 +347,7 @@ Four examples of motion construction and re-targeting using our dataset are show
     </tr>
 </table>
 
-<br>
+
 #### Hand joint position extraction
 
 We extract hand joint positions (i.e., their XYZ 3D locations) based on the euler joint angles captured by Stretchsense MoCap Pro gloves and bone lengths using forward kenamatics. We provide a set of default bone lenghts:
@@ -378,7 +378,7 @@ In both cases, the extracted hand joint positions will be saved in json files, w
 </tr>
 </table  >
 
-<br>
+
 #### Visualization
 
 The first step of using our visualization tool is to prepare the processed data. This can be done by the provided [processor](#data-processing). Alternatively, for a quick browse, we offer the processed data of several sample takes that can be directly downloaded from [here](https://h2tc-roboticsx.github.io/dataset/#sample-cases). Eventually, you should have the data stored in a path similar to this: `PARENT_PATH/data/take_id/processed`.
