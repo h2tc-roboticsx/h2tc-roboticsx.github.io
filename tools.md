@@ -150,6 +150,7 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 ![cam_calib](./cam_calib.png) -->
 
 #### Human Motion Construction and Retargeting 
+</br>
 ##### Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
