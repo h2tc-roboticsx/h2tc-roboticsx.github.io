@@ -319,7 +319,7 @@ SMPL-to-FBX-main
 python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
 ```
 
-to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
+to start converting. The animation file will be saved in `<output_path>`. You can open it via Blender or Unity 3D.
 
 ###### III.2 Retargeting 
 
