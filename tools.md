@@ -151,7 +151,7 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 
 #### Human Motion Construction and Retargeting 
 
-##### (I) Coarse human pose estimation
+##### I. Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
 1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
@@ -202,7 +202,7 @@ python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints
 
 The human poses will be stored in `vis_results/inference_result.npz` with smpl format. <br>
 
-##### (II) Multi-modal based human pose optimization  <br>
+##### II. Multi-modal based human pose optimization  <br>
 
 &ensp; 1. Installation:<br>
 ```bash
@@ -238,7 +238,7 @@ python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-pa
 
 `<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz` 
 
-###### Optimization Algorithm
+* Optimization Algorithm
 
 Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results. <br>   
 
@@ -284,9 +284,9 @@ For hands pose, we already have captured the two hands poses $\Theta_{hand}$ in 
 
 We initialize the optimization processing with the mmhuman poses. All $\lambda$ are weights to decide the contribution of each term.  <br>  
 
-#### Retargeting
+##### III. Retargeting
 
-##### (I) Smplh sequence pose -> General format animation (.fbx) <br>
+###### (I) Smplh sequence pose -> General format animation (.fbx) <br>
 
 &ensp; 1. Installation: 
 
@@ -321,7 +321,7 @@ python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
 
-##### (II) Retargeting 
+###### (II) Retargeting 
 
 We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps: <br>
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
