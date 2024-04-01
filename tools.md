@@ -154,9 +154,9 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 ##### I. Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
-1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
-2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder.  <br>
-3) SMPL related resources and pretrained models: 
+(1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
+(2) H2TC data: Download h2tc data and fetch the `rgbd0` image folder.  <br>
+(3) SMPL related resources and pretrained models: 
 [SMPL](https://smpl.is.tue.mpg.de/) v1.0 and some other resources from [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) that are needed in this step:  <br>
 
 &emsp;   [J_regressor_extra.npy](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/J_regressor_extra.npy?versionId=CAEQHhiBgIDD6c3V6xciIGIwZDEzYWI5NTBlOTRkODU4OTE1M2Y4YTI0NTVlZGM1)
@@ -204,7 +204,7 @@ The human poses will be stored in `vis_results/inference_result.npz` with smpl f
 
 ##### II. Multi-modal based human pose optimization  <br>
 
-&ensp; 1. Installation:<br>
+&ensp; (1) Installation:<br>
 ```bash
 conda create -n pose python=3.7
 conda activate pose
@@ -212,8 +212,8 @@ conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
 pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pyglet==1.5.15,tensorboard,git+https://github.com/nghorbani/configer,torchgeometry==0.1.2,smplx==0.1.28
 ```
 
-&ensp; 2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
-&ensp; 3. File structure:
+&ensp; (2) Download [smplh](https://mano.is.tue.mpg.de/)<br>
+&ensp; (3) File structure:
 
 ```text
 pose_reconstruction_frommm
@@ -226,7 +226,7 @@ pose_reconstruction_frommm
 |--fit_h2tc_mm.cfg      # config file
  ```
 
-&ensp; 4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
+&ensp; (4) Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
 
 ```bash
 python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-path <h2tc_takeid_processed_folder> --mmhuman <mmhuman_file> --out <out_pose_folder>
@@ -286,19 +286,19 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 ##### III. Retargeting
 
-###### (I) Smplh sequence pose -> General format animation (.fbx) <br>
+###### III.1 Smplh sequence pose -> General format animation (.fbx) <br>
 
-&ensp; 1. Installation: 
+&ensp; (1) Installation: 
 
     a. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312). 
     
     b. Open `SMPL-to-FBX-main` and `pip install -r requirements.txt`
 
-&ensp; 2. SMPLX fbx: 
+&ensp; (2) SMPLX fbx: 
 
     Download the [SMPLX fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the female model `smplx-female.fbx` and male model `smplx-male.fbx`.
 
-&ensp; 3. The file structure would be like:
+&ensp; (3) The file structure would be like:
 
 ```text
 SMPL-to-FBX-main
@@ -313,7 +313,7 @@ SMPL-to-FBX-main
 |--<output_path>/
 ```
 
-&ensp; 4. Run 
+&ensp; (4) Run 
 
 ```bash
 python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
@@ -321,14 +321,14 @@ python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
 
-###### (II) Retargeting 
+###### III.2 Retargeting 
 
 We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps: <br>
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
 
-&ensp; 1. Model rigging: given a mesh model, bound the mesh vertices to bones <br>
-&ensp; 2. Specifying the corresponding skeleton joints between rigged model A and B: Unity 3D automatically solves it after setting the rigged models as `humanoid` in `animation type`.  <br>
-&ensp; 3. Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
+&ensp; (1) Model rigging: given a mesh model, bound the mesh vertices to bones <br>
+&ensp; (2) Specifying the corresponding skeleton joints between rigged model A and B: Unity 3D automatically solves it after setting the rigged models as `humanoid` in `animation type`.  <br>
+&ensp; (3) Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
 
 Four examples of motion construction and re-targeting using our dataset are shown below: <br>
 
@@ -347,7 +347,7 @@ Four examples of motion construction and re-targeting using our dataset are show
     </tr>
 </table>
 
-
+<br>
 #### Hand joint position extraction
 
 We extract hand joint positions (i.e., their XYZ 3D locations) based on the euler joint angles captured by Stretchsense MoCap Pro gloves and bone lengths using forward kenamatics. We provide a set of default bone lenghts:
@@ -378,8 +378,7 @@ In both cases, the extracted hand joint positions will be saved in json files, w
 </tr>
 </table  >
 
-
-
+<br>
 #### Visualization
 
 The first step of using our visualization tool is to prepare the processed data. This can be done by the provided [processor](#data-processing). Alternatively, for a quick browse, we offer the processed data of several sample takes that can be directly downloaded from [here](https://h2tc-roboticsx.github.io/dataset/#sample-cases). Eventually, you should have the data stored in a path similar to this: `PARENT_PATH/data/take_id/processed`.
@@ -394,9 +393,9 @@ The argument `--take` specifies the ID of the take to be visualized if set, othe
 
 Once the interface is launched, you can navigate the visualization through the following operations:
 
-&ensp; 1. `space`: play/pause the videos of all streams <br>
-&ensp; 2. `right arrow`: pause the video if played and forward to the next frame <br>
-&ensp; 3. `left arrow`: pause the video if played and backward to the last frame <br>
+&ensp; (1) `space`: play/pause the videos of all streams <br>
+&ensp; (2) `right arrow`: pause the video if played and forward to the next frame <br>
+&ensp; (3) `left arrow`: pause the video if played and backward to the last frame <br>
 
 Below is an example of visualizing a take:
 
