@@ -238,7 +238,7 @@ python pose_reconstruction_frommm/run_fitting_mm.py @./fit_h2tc_mm.cfg --data-pa
 
 `<out_pose_folder>`: folder path to save the optimization pose results. The output meshes are saved in `<out_pose_folder>/body_meshes_humor`. Optimized human poses are saved in `<out_pose_folder>/results_out/stage2_results.npz` 
 
-&emsp; * Optimization Algorithm
+&emsp;* Optimization Algorithm
 
 Due to inevitable visual occlusion, the results of [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) are coarse, especially in arms and hands. Taking into account the multi-modal data collected in our dataset, including OptiTrack, gloves poses, rgb images and so on, these information can help us optimize the [mmhuman](https://github.com/open-mmlab/mmhuman3d/tree/main) results. <br>   
 
