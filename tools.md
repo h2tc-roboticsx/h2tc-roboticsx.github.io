@@ -151,7 +151,7 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 
 #### Human Motion Construction and Retargeting 
 
-##### Coarse human pose estimation
+##### (I) Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
 1) Installation: please follow the [official getting started](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/getting_started.md) for installation.   <br>
@@ -202,7 +202,7 @@ python demo/estimate_smpl.py configs/spin/resnet50_spin_pw3d.py data/checkpoints
 
 The human poses will be stored in `vis_results/inference_result.npz` with smpl format. <br>
 
-##### Multi-modal based human pose optimization  <br>
+##### (II) Multi-modal based human pose optimization  <br>
 
 &ensp; 1. Installation:<br>
 ```bash
@@ -286,7 +286,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 #### Retargeting
 
-##### Smplh sequence pose -> General format animation (.fbx) <br>
+##### (I) Smplh sequence pose -> General format animation (.fbx) <br>
 
 &ensp; 1. Installation: 
 
@@ -321,7 +321,7 @@ python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
 
-##### Retargeting 
+##### (II) Retargeting 
 
 We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tutorial video](https://www.youtube.com/watch?v=BEZHVYk6Fa4) first, then you can follow the following steps: <br>
 <!-- 1. Model rigging: give an artist a mesh model, ask him to bound the mesh vertices to bones (it is called rigging in graphics) -->
