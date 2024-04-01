@@ -366,7 +366,13 @@ Specifically, hand joint position extraction has been integrated into `plot_moti
 
 In addition, we provide a new script called `src/utils/extract_hand_joint_positions.py` to allow users to extract/adjust hand joint positions separately from the data processing process. 
 
-In both cases, the extracted hand joint positions will be saved in json files, with joint positions of left hand in `left_hand_joint_positions.json` and those of right hand in `right_hand_joint_positions.json`.
+To run `src/utils/extract_hand_joint_positions.py`, users need to specify the root folder path of the take (e.g., data/001000):
+
+```bash
+python extract_hand_joint_positions.py --data_root path/to/the_take 
+```
+
+In both cases, the extracted hand joint positions will be saved in json files, with joint positions of left hand in `path/to/the_take/processed/left_hand_joint_positions.json` and those of right hand in `path/to/the_take/processed/right_hand_joint_positions.json`.
 
 20 joint positions are saved, and the json file contains key-value entries with key representing frame number and value being a list of joint positions. In each list, from index 0 to index 19, the saved joint positions are indicated as below:
 
