@@ -268,7 +268,7 @@ $$
 
 where ${\mathbf{v}_{wri}}_t^h$ is the SMPLH right/left wrist pose.  <br> 
 
-Independent frame-by-frame pose estimation always causes temporally inconsistent. The regularization term $\mathcal{C_{smo}}$ is used to guarantee the smoothness of the motion recovering and keep it reasonable. The smooth term encourages the 3D joints consistency. It is formulated as <br>
+Independent frame-by-frame pose estimation always causes temporal inconsistency. The regularization term $\mathcal{C_{smo}}$ is used to guarantee the smoothness of the motion recovering and keep it reasonable. The smooth term encourages the 3D joints consistency. It is formulated as <br>
 
 $$
 \mathcal{C_{smo}}= \sum_{t=1}^{T}
