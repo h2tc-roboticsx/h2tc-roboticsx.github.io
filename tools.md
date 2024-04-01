@@ -387,7 +387,7 @@ The first step of using our visualization tool is to prepare the processed data.
 Now you can run the following command to launch the visualization tool:
 
 ```python
-python src/visualization python src/visualize.py --datapath PARENT_PATH/data --take take_id --speed 120
+python src/visualize.py --datapath PARENT_PATH/data --take take_id --speed 120
 ```
 
 The argument `--take` specifies the ID of the take to be visualized if set, otherwise the first take under the given path will be loaded. `--speed` specifies the FPS for playing the frames of streams.
