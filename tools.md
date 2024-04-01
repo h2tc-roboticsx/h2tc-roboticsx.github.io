@@ -300,22 +300,22 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 &ensp; 3. The file structure would be like:
 
 ```text
-    SMPL-to-FBX-main
-    |--Convert.py
-    |--SMPLXObject.py
-    |--FbxReadWriter.py
-    |--<smplh_pose>/
-    |  |--*.npz
-    |--<fbx_path>/
-    |  |--smplx-female.fbx
-    |  |--smplx-male.fbx
-    |--<output_path>/
+SMPL-to-FBX-main
+|--Convert.py
+|--SMPLXObject.py
+|--FbxReadWriter.py
+|--<smplh_pose>/
+|  |--*.npz
+|--<fbx_path>/
+|  |--smplx-female.fbx
+|  |--smplx-male.fbx
+|--<output_path>/
 ```
 
 &ensp; 4. Run 
 
 ```bash
-    python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
+python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
 ```
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
