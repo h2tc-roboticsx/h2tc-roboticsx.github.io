@@ -139,7 +139,6 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 We recommend users to read the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
 
-#### Human Motion Construction and Retargeting 
 <!-- ##### 1. Camera calibration
 - The camera intrinsic matrix is:
 ```
@@ -149,8 +148,8 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 ```
 - The camera extrinsic matrix could be calculated by `annotator_camextr.py`. The `img_file` is the path of image to be annotated. As illustrated below, after annotating the ground corners `ABCD` (! be sure to follow the ABCD order), the camera extrinsic parameters (world to camera transformation) will be computed with Perspective-n-Point (PnP) algorithm. Camera intrinsic matrix `CamIntr.txt` and extrinsic matrix `CamExtr.txt` will be saved in `save_folder`. 
 ![cam_calib](./cam_calib.png) -->
-<br>  
 
+#### Human Motion Construction and Retargeting 
 ##### Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
