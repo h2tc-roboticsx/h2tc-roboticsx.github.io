@@ -299,7 +299,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 &ensp; 3. The file structure would be like:
 
-    ```text
+```text
     SMPL-to-FBX-main
     |--Convert.py
     |--SMPLXObject.py
@@ -310,7 +310,7 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
     |  |--smplx-female.fbx
     |  |--smplx-male.fbx
     |--<output_path>/
-    ```
+```
 
 &ensp; 4. Run 
 
