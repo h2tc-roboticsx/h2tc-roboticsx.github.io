@@ -139,7 +139,6 @@ The [annotator](https://github.com/h2tc-roboticsx/H2TC/tree/main/src) enables us
 We recommend users to read the comprehensive [annotation guide](https://github.com/h2tc-roboticsx/H2TC/blob/main#annotation) for a detailed explanation of the annotator and its usage, as well as the dataset annotation.
 
 
-#### Human Motion Construction and Retargeting 
 <!-- ##### 1. Camera calibration
 - The camera intrinsic matrix is:
 ```
@@ -149,8 +148,8 @@ We recommend users to read the comprehensive [annotation guide](https://github.c
 ```
 - The camera extrinsic matrix could be calculated by `annotator_camextr.py`. The `img_file` is the path of image to be annotated. As illustrated below, after annotating the ground corners `ABCD` (! be sure to follow the ABCD order), the camera extrinsic parameters (world to camera transformation) will be computed with Perspective-n-Point (PnP) algorithm. Camera intrinsic matrix `CamIntr.txt` and extrinsic matrix `CamExtr.txt` will be saved in `save_folder`. 
 ![cam_calib](./cam_calib.png) -->
-<br>  
 
+#### Human Motion Construction and Retargeting 
 ##### Coarse human pose estimation
 
 We use [mmhuman3d](https://github.com/open-mmlab/mmhuman3d/tree/main) to estimate the coarse human poses. <br>
@@ -215,16 +214,16 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
 &ensp; 2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
 &ensp; 3. File structure:
 
-    ```text
-    pose_reconstruction_frommm
-    |--config.py
-    |--fitting_utls.py
-    |--h2tc_fit_dataset_mm.py
-    |--motion_optimizer.py
-    |--run_fitting_mm.py
-    |--smplh_male.npz       # smplh model (male)
-    |--fit_h2tc_mm.cfg      # config file
-    ```
+```text
+pose_reconstruction_frommm
+|--config.py
+|--fitting_utls.py
+|--h2tc_fit_dataset_mm.py
+|--motion_optimizer.py
+|--run_fitting_mm.py
+|--smplh_male.npz       # smplh model (male)
+|--fit_h2tc_mm.cfg      # config file
+ ```
 
 &ensp; 4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
 
@@ -300,23 +299,23 @@ We initialize the optimization processing with the mmhuman poses. All $\lambda$ 
 
 &ensp; 3. The file structure would be like:
 
-    ```text
-    SMPL-to-FBX-main
-    |--Convert.py
-    |--SMPLXObject.py
-    |--FbxReadWriter.py
-    |--<smplh_pose>/
-    |  |--*.npz
-    |--<fbx_path>/
-    |  |--smplx-female.fbx
-    |  |--smplx-male.fbx
-    |--<output_path>/
-    ```
+```text
+SMPL-to-FBX-main
+|--Convert.py
+|--SMPLXObject.py
+|--FbxReadWriter.py
+|--<smplh_pose>/
+|  |--*.npz
+|--<fbx_path>/
+|  |--smplx-female.fbx
+|  |--smplx-male.fbx
+|--<output_path>/
+```
 
 &ensp; 4. Run 
 
 ```bash
-    python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
+python Convert.py --input_motion_base <smplh_pose> --fbx_source_path <fbx_path>/smplx-female.fbx --output_base <output_path>
 ```
 
 to start converting. The animation file will save in `<output_path>`. You can open it via Blender or Unity 3D.
