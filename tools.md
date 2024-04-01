@@ -214,16 +214,16 @@ pip install matplotlib, opencv-python,scikit-learn,trimesh,Pillow,pyrender,pygle
 &ensp; 2. Download [smplh](https://mano.is.tue.mpg.de/)<br>
 &ensp; 3. File structure:
 
-    ```text
-    pose_reconstruction_frommm
-    |--config.py
-    |--fitting_utls.py
-    |--h2tc_fit_dataset_mm.py
-    |--motion_optimizer.py
-    |--run_fitting_mm.py
-    |--smplh_male.npz       # smplh model (male)
-    |--fit_h2tc_mm.cfg      # config file
-    ```
+```text
+pose_reconstruction_frommm
+|--config.py
+|--fitting_utls.py
+|--h2tc_fit_dataset_mm.py
+|--motion_optimizer.py
+|--run_fitting_mm.py
+|--smplh_male.npz       # smplh model (male)
+|--fit_h2tc_mm.cfg      # config file
+ ```
 
 &ensp; 4. Run the multi-modal optimizer to optimize the human poses with the opti-track data and glove hands. <br>
 
