@@ -328,7 +328,7 @@ We use Unity 3D (2022.3.17) to demostrate the retargeting. Plese check the [tuto
 
 &ensp; (1) Model rigging: given a mesh model, bound the mesh vertices to bones <br>
 &ensp; (2) Specifying the corresponding skeleton joints between rigged model A and B: Unity 3D automatically solves it after setting the rigged models as `humanoid` in `animation type`.  <br>
-&ensp; (3) Animation: please follow the above tutorial video. The animation algothrim used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
+&ensp; (3) Animation: please follow the above tutorial video. The animation algorithm used in Unity 3D is [Linear Blend Skinning (LBS)](http://graphics.cs.cmu.edu/courses/15-466-f17/notes/skinning.html).  <br>
 
 Four examples of motion construction and re-targeting using our dataset are shown below: <br>
 
